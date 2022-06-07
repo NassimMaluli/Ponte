@@ -44,7 +44,8 @@
                     app:layout_constraintHorizontal_bias="0.982"
                     app:layout_constraintStart_toEndOf="@+id/greetingText1"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.48000002" />
+                    app:layout_constraintVertical_bias="0.48000002"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <Button
                     android:id="@+id/addButton"
@@ -59,24 +60,46 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/greetingText1"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.466" />
+                    app:layout_constraintVertical_bias="0.466"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/greetingText1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginEnd="353dp"
                     android:layout_marginBottom="16dp"
                     android:elevation="10dp"
-                    android:text="Dieraty Information"
+                    android:text="Hi"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.625" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="171dp"
+                    android:layout_marginBottom="19dp"
+                    android:text="Username"
+                    android:textColor="#FDFDFD"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/addButton"
+                    app:layout_constraintHorizontal_bias="0.41"
+                    app:layout_constraintStart_toEndOf="@+id/greetingText1"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Macro Information"
+                android:text="Main Dashboard"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -119,6 +142,109 @@
                 android:elevation="10dp"
                 android:foregroundGravity="center">
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="103dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="100dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="121dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/personalInfoLinearLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.671"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/DietTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Information"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.108" />
+
+                <LinearLayout
+                    android:id="@+id/personalInfoLinearLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="23dp"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DietTextView">
+
+                    <TextView
+                        android:id="@+id/persoTextView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:text="First name" />
+
+                    <TextView
+                        android:id="@+id/persoTextView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surename" />
+
+                    <TextView
+                        android:id="@+id/persoTextView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age" />
+
+                    <TextView
+                        android:id="@+id/persoTextView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sex" />
+
+                    <TextView
+                        android:id="@+id/persoTextView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Weight" />
+
+                    <TextView
+                        android:id="@+id/persoTextView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/persoTextView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/persoTextView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Space
@@ -128,7 +254,8 @@
             <HorizontalScrollView
                 android:id="@+id/ScrollViewHor"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:ignore="SpeakableTextPresentCheck">
 
                 <LinearLayout
                     android:id="@+id/horScroll1"
@@ -142,7 +269,7 @@
                         android:layout_width="370dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
-                        android:layout_margin="10dp"
+                        android:layout_margin="20dp"
                         android:background="@drawable/white_background"
                         android:elevation="10dp"
                         android:foregroundGravity="center">
@@ -154,7 +281,7 @@
                         android:layout_width="370dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
-                        android:layout_margin="10dp"
+                        android:layout_margin="20dp"
                         android:background="@drawable/white_background"
                         android:elevation="10dp"
                         android:foregroundGravity="center">
@@ -166,8 +293,8 @@
                         android:layout_width="370dp"
                         android:layout_height="250dp"
                         android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:background="#FFFF"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/white_background"
                         android:elevation="10dp"
                         android:foregroundGravity="center">
 
